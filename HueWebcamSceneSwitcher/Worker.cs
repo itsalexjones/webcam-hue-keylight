@@ -89,6 +89,9 @@ public class Worker : BackgroundService
                     continue;
                 }
 
+                // Store the current state to be restored when the webcam turns off.
+                _keyLight = r.data.First();
+
                 // Change the light settings
                 var body = new Datum
                 {
